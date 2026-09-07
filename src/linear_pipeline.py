@@ -8,7 +8,7 @@ from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, StandardSc
 from sklearn.base import BaseEstimator, TransformerMixin
 
 class GeoTransformer(BaseEstimator, TransformerMixin):
-    def __init__(self, n_clusters=15, random_state=42):
+    def __init__(self, n_clusters=2, random_state=42):
         self.n_clusters = n_clusters
         self.random_state = random_state
 
