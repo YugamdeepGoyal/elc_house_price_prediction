@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 from pathlib import Path
+import numpy as np
 
 
 def metrics(y_true, y_pred):
@@ -18,4 +19,17 @@ def metrics(y_true, y_pred):
 
 
 def plot_residual_curve(y_true, y_pred, model):
-    pass
+    plt.figure(figsize=(8, 5))
+    y_true = np.asarray(y_true)
+    y_pred = np.asarray(y_pred)
+    residuals = y_true-y_pred
+    sns.regplot(x=y_pred, y=residuals, lowess=True, 
+                scatter_kws={"alpha": 0.3, "color": "green"}, 
+                line_kws={"color": "red"})
+    plt.xlabel("Predicted Values")
+    plt.ylabel("Residuals")
+    plt.title("Residual Plot with Lowess Curve")
+    plt.axhline(0, color="black", linestyle="--")
+    plt.tight_layout()
+    plt.savefig(f"images/{model}_residual_curve.png")
+    plt.show()
