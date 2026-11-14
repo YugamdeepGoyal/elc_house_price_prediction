@@ -268,3 +268,9 @@ __pycache__/
 *.code-workspace
 
 *.lock
+
+House Price Prediction using Machine Learning.pdf
+
+models/
+
+models/random_forest.joblib
