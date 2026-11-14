@@ -23,7 +23,7 @@ elc_house_price_prediction/
 │   └── tree_nn_pipeline.py# preprocessing for Random Forest and ANN (ratio features, log fix, scaling, clipping)
 ├── images/                # all plots saved by the notebooks
 ├── models/                # saved models (created automatically when the notebooks run)
-├── House Price Prediction using Machine Learning (PDF report)
+├── House Price Prediction using Machine Learning.pdf
 └── README.md
 ```
 
